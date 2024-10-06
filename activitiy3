@@ -1,0 +1,26 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class QueueExample {
+    public static void main(String[] args) {
+        Queue<Integer> queue = new LinkedList<>();
+
+        // Enqueuing 28 items in the queue
+        for (int i = 1; i <= 28; i++) {
+            queue.add(i);
+        }
+
+        // Display the first and last items before dequeuing
+        System.out.println("First item in the queue before dequeue: " + queue.peek());
+        System.out.println("Last item in the queue before dequeue: " + ((LinkedList<Integer>)queue).getLast());
+
+        // Dequeuing 7 items from the queue
+        for (int i = 0; i < 7; i++) {
+            queue.poll();
+        }
+
+        // Display the first and last items after dequeuing
+        System.out.println("First item in the queue after dequeue: " + queue.peek());
+        System.out.println("Last item in the queue after dequeue: " + ((LinkedList<Integer>)queue).getLast());
+    }
+}
